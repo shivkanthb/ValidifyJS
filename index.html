@@ -1,0 +1,18 @@
+<html>
+<head>
+<script src="lib.js"></script>
+
+<script>
+ function check() {
+ 	var input = document.getElementById('userinput').value;
+ 	var result = Lib.isInteger(input);
+ 	document.getElementById('output').innerHTML = result;
+ }
+</script>
+</head>
+<body>
+<input type="text" id='userinput'></input>
+<input type="button" onclick="check()" value="check"></input> 
+<div id="output"></div>
+</body>
+</html>
