@@ -6,7 +6,22 @@
             pattern: undefined,
         };
         var proj = "validify";
-
+	
+	Lib.validateForm = function(form) {
+	    var elements = form.elements, response = [], responseObject, i, input, check;
+	    for(i=0;i<elements.length;i++) {
+		input = elements[i];
+		check = input.getAttribute("data-validify");
+		if(check != null) {
+		    responseObject = {};
+		    responseObject.field = input.id;
+		    responseObject.status = Lib["is"+check.charAt(0).toUpperCase() + check.slice(1)](input.value);
+		    response.push(responseObject);
+		}
+	    }
+	    return response;
+	}
+	
         Lib.isInputEmpty = function(input) {
             return input.length == 0;
         }

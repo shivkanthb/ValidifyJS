@@ -1,18 +1,20 @@
+<!DOCTYPE html>
 <html>
-<head>
-<script src="../lib.js"></script>
-
-<script>
- function check() {
- 	var input = document.getElementById('userinput').value;
- 	var result = Lib.isInteger(input);
- 	document.getElementById('output').innerHTML = result;
- }
-</script>
-</head>
-<body>
-<input type="text" id='userinput'></input>
-<input type="button" onclick="check()" value="check"></input> 
-<div id="output"></div>
-</body>
+  <head>
+    <script src="../lib.js"></script>
+    
+    <script>
+      function check() {
+       console.log(Lib.validateForm(document.getElementById("form")));
+      }
+    </script>
+  </head>
+  <body>
+    <form id="form">
+      <input type="text" id="email" data-validify="email" />
+      <input type="text" id="number" data-validify="number" />
+      <input type="button" onclick="check()" value="check" />
+    </form>
+    <div id="output"></div>
+  </body>
 </html>
