@@ -1,0 +1,32 @@
+{
+  "name": "validifyjs",
+  "version": "1.0.0",
+  "description": "Simple validation library in JS",
+  "main": "index.js",
+  "directories": {
+    "example": "examples",
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivkanthb/Validifyjs.git"
+  },
+  "keywords": [
+    "validation",
+    "validate"
+  ],
+  "author": "shivkanthb",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivkanthb/Validifyjs/issues"
+  },
+  "homepage": "https://github.com/shivkanthb/Validifyjs#readme"
+}
