@@ -29,7 +29,7 @@
         }
 
         Lib.isMMDDYYYYDate = function(input) {
-            Lib.pattern = /^\d{2}\/\d{2}\/\d{4}$/;
+            Lib.pattern = new RegExp("^((0?[1-9]|1[012])[- /.](0?[1-9]|[12][0-9]|3[01])[- /.](19|20)?[0-9]{2})*$");
             return (Lib.pattern.test(input));
         }
 
@@ -64,7 +64,7 @@
         }
 
         Lib.isEmail = function(input) {
-            Lib.pattern = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            Lib.pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return (Lib.pattern.test(input));
         }
 
@@ -79,8 +79,9 @@
         }
 
         Lib.isPositive = function(input) {
-            Lib.pattern = /^\d+$/;
-            return (Lib.pattern.test(input));
+	    return Lib.isNumber(input) && input >= 0;
+            //Lib.pattern = /^\d+$/;
+            //return (Lib.pattern.test(input));
         }
 
         Lib.isNegative = function(input) {
