@@ -80,23 +80,11 @@
 
         Lib.isPositive = function(input) {
 	    return Lib.isNumber(input) && input >= 0;
-            //Lib.pattern = /^\d+$/;
-            //return (Lib.pattern.test(input));
         }
 
         Lib.isNegative = function(input) {
-            Lib.pattern = /^-\d+$/;
-            return (Lib.pattern.test(input));
+            return Lib.isNumber(input) && input <= 0;
         }
-
-        /*
-        Matches the following patterns
-        123-456-7890
-        (123) 456-7890
-        123 456 7890
-        123.456.7890
-        +91 (123) 456-7890
-        */
 
         Lib.isPhoneNumber = function(input) {
             Lib.pattern = /^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]\d{3}[\s.-]\d{4}$/;
