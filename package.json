@@ -2,7 +2,7 @@
   "name": "validifyjs",
   "version": "1.0.0",
   "description": "Simple validation library in JS",
-  "main": "index.js",
+  "main": "validify.js",
   "directories": {
     "example": "examples",
     "test": "test"
