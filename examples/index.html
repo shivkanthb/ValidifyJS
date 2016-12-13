@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="../lib.js"></script>
+    <script src="../validify.js"></script>
     
     <script>
       function check() {
-       console.log(Lib.validateForm(document.getElementById("form")));
+        var val = document.getElementById('email').value;
+        alert(validify.isInteger(val));
+       // console.log(Lib.validateForm(document.getElementById("form")));
       }
     </script>
   </head>
