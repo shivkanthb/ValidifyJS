@@ -18,24 +18,51 @@
       <header>
         <h1>Validify</h1>
         <p>A simple validation JS library.</p>
-        <p class="view"><a href="http://github.com/orderedlist/modernist">View the Project on GitHub <small>orderedlist/modernist</small></a></p>
+        <p class="view"><a href="http://github.com/shivkanthb/ValidifyJS">View the Project on GitHub <small>shivkanthb/ValidifyJS</small></a></p>
         <ul>
-          <li><a href="https://github.com/orderedlist/modernist/zipballmus/master">Download <strong>ZIP File</strong></a></li>
-          <li><a href="https://github.com/orderedlist/modernist/tarball/master">Download <strong>TAR Ball</strong></a></li>
-          <li><a href="http://github.com/orderedlist/modernist">View On <strong>GitHub</strong></a></li>
+          <li><a href="https://cdn.rawgit.com/shivkanthb/ValidifyJS/master/validify.js" download="validify.js">Download <strong>validify.js</strong></a></li>
+          <li><a href="https://github.com/shivkanthb/ValidifyJS/archive/master.zip">Download <strong>ZIP File</strong></a></li>
+          <li><a href="http://github.com/shivkanthb/ValidifyJS">View On <strong>GitHub</strong></a></li>
         </ul>
       </header>
       <section>
-        <h1>Let&rsquo; Test Some Markup</h1>
-        <p><em>View the <a href="http://github.github.com/github-flavored-markdown/sample_content.html">source of this content</a>.</em></p>
-        <p>Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:</p>
-        <div class="highlight">
+        <h1>Generic validation library in javascript</h1>
+        <p>Can be used as both an npm module and also on the browser.</p>
+        <h2>Installation</h2>
+        <p><Strong>Node :</Strong></p>
+        <pre><code>npm install validifyjs</code></pre>
+        <p><strong>Browser :</strong></p>
+        <pre><code><script src=“validify.js”></script></code></pre>
+        <!-- <div class="highlight">
         <pre><span class="nb">require</span> <span class="s1">'redcarpet'</span>
 <span class="n">markdown</span> <span class="o">=</span> <span class="no">Redcarpet</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="s2">"Hello World!"</span><span class="p">)</span>
 <span class="nb">puts</span> <span class="n">markdown</span><span class="o">.</span><span class="n">to_html</span></pre>
-        </div>
-        <p>Roses are red<br>Violets are blue</p>
-        <p>The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:</p>
+        </div> -->
+        <h2>Usage</h2>
+        <p><strong>Browser</strong></p>
+        <p>Add html attribute "data-validify" to the element to be validated. The value of the attribute would decide what validation is to be done.</p>
+        <p><strong>npm module</strong></p>
+        <p>Individual methods and validateForm(formElements) can be called for validation, as mentioned in the case for the browser.</p>
+        <p>Methods:</p>
+        <li>isEmpty()</li>
+        <li>isZipCode() (only for codes in the US)</li>
+        <li>isMDDYYYYDate()</li>
+        <li>isDDMMYYYYDate()</li>
+        <li>is24HourTime()</li>
+        <li>is12HourTime()</li>
+        <li>isHtml()</li>
+        <li>isHexColor()</li>
+        <li>isUrl()</li>
+        <li>isEmail()</li>
+        <li>isNumber()</li>
+        <li>isInteger()</li>
+        <li>isPositive()</li>
+        <li>isNegative()</li>
+        <li>isIpv4()</li>
+        <li>isIPv6()</li>
+        <h2>Usage</h2>
+        <pre><code>npm test</code></pre>
+        
         <p>Roses are <em>emphasized</em><br>Violets are <strong>strong</strong></p>
         <h2>A bit of the GitHub spice</h2>
         <h3>In addition to the changes in the previous section, certain references are auto-linked:</h3>
